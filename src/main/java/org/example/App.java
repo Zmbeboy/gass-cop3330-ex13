@@ -26,6 +26,9 @@ public class App
         double comp = Double.parseDouble(compound);
         double investment = princ*(Math.pow(1+(roi*.01)/comp,comp*years));
 
+        princ = Math.ceil(princ);
+        investment = Math.ceil(investment);
+
         String invest= String.format("$%.2f",investment);
         String prin= String.format("$%.2f",princ);
 
